@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class MathNStuff 
+{
+    public static void main(String args[]) 
+    {
+      Scanner keyboard = new Scanner(System.in);
+      String diaOrRad;
+      double diameter = 0;
+      double radius = 0;
+      double circumference = 0;
+    
+      System.out.println("~Circumference Calculator~\n");
+      System.out.println("Diameter or radius? (Type 'd' or 'r')");
+      diaOrRad = keyboard.nextLine();
+      
+      if (diaOrRad.equalsIgnoreCase("d"))
+      {
+        System.out.println("\nPlease enter a diameter");
+        diameter = keyboard.nextDouble();
+        circumference = diameter * Math.PI;
+      }
+      else if (diaOrRad.equalsIgnoreCase("r"))
+      {
+        System.out.println("\nPlease enter a radius");
+        radius = keyboard.nextDouble();
+        circumference = (radius * 2) * Math.PI;
+      }
+      
+      System.out.println("\nThe circumference of your circle is:");
+      System.out.printf("%.2f", circumference);
+      
+    } // end main method
+} // end class MathNStuff
